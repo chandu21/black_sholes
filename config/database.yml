@@ -1,0 +1,44 @@
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: black_sholes_development
+  pool: 5
+  username: root
+  password: root 
+  host: localhost
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+# test:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: ror_ecommerce_test
+#   pool: 5
+#   username: root
+#   password:
+#   host: localhost
+
+production:
+  adapter: pg 
+  encoding: utf8
+  reconnect: false
+  database: dbvoj5ph7j6k04
+  pool: 5
+  username: unxacuzvrgpjld
+  password: 1526e90ca50483fc014dd84a9c1e4cb9e6489debc229cc19511befa69ab81382 
+  socket: /tmp/mysql.sock
+  host: ec2-23-23-186-157.compute-1.amazonaws.com
+  
