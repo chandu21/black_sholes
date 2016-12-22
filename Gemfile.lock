@@ -180,7 +180,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (< 5.0.0)
   activerecord-native_db_types_override
   bootstrap-will_paginate
   coffee-rails (~> 3.1.1)

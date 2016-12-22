@@ -18,7 +18,7 @@ gem 'rails', '3.1.4'
 #   gem 'thin'
 # end
 
-gem "activerecord", "< 5.0.0"
+# gem "activerecord", "< 5.0.0"
 gem 'activerecord-native_db_types_override'
 gem 'statistics2'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
