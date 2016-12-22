@@ -32,6 +32,7 @@ GEM
       activesupport (= 3.1.4)
       arel (~> 2.2.3)
       tzinfo (~> 0.3.29)
+    activerecord-native_db_types_override (0.2.1)
     activeresource (3.1.4)
       activemodel (= 3.1.4)
       activesupport (= 3.1.4)
@@ -186,6 +187,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-native_db_types_override
   bootstrap-will_paginate
   coffee-rails (~> 3.1.1)
   devise
