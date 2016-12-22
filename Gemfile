@@ -8,15 +8,16 @@ gem 'rails', '3.1.4'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-# gem 'mysql2'
-group :development do 
-  gem 'mysql2'
-end
+ gem 'pg'
+# group :development do 
+#   gem 'mysql2'
+# end
 
-group :production do
-  gem 'pg'
-  gem 'thin'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'thin'
+# end
+
 gem "activerecord", "< 5.0.0"
 gem 'activerecord-native_db_types_override'
 gem 'statistics2'
