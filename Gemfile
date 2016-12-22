@@ -1,17 +1,29 @@
 source 'http://rubygems.org'
+ruby "1.9.3" 
+gem 'sinatra_auth_github', '~> 1.0'
+gem 'git', '~> 1.2'
 
 gem 'rails', '3.1.4'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+# gem 'mysql2'
+group :development do 
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'pg'
+  gem 'thin'
+end
 gem 'statistics2'
 gem 'simple_form', :git => 'git://github.com/plataformatec/simple_form.git'
 gem 'will_paginate', '> 3.0'
 gem 'bootstrap-will_paginate'
 gem 'execjs'
-gem 'therubyracer' ,'~> 0.10.1'
+gem 'therubyracer', '0.10.1', platforms: :ruby
+#gem 'therubyracer' ,'~> 0.10.1'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -43,12 +55,9 @@ gem 'devise'
 #production and deployment
 gem 'heroku'
 
-group :production do
-  gem 'pg'
-	gem 'thin'
-end
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', '0.8.2', :require => false
-end
+
+# group :test do
+#   # Pretty printed test output
+#   gem 'turn', '0.8.2', :require => false
+# end
