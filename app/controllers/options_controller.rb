@@ -63,7 +63,9 @@ class OptionsController < ApplicationController
   # PUT /options/1.json
   def update
     @option = Option.find(params[:id])
-
+    option_params = params[:option]
+    @prices = Option.black_scholes_call_price(option_params[:price].to_i,option_params[:strike].to_i,option_params[:riskfree].to_i,option_params[:dividend].to_f,option_params[:term].to_f,option_params[:volatility].to_f) 
+    @option.update_attributes(:call_price => @prices[0] ,:put_price => @prices[1]) 
     respond_to do |format|
       if @option.update_attributes(params[:option])
         format.html { redirect_to @option, notice: 'Option was successfully updated.' }
