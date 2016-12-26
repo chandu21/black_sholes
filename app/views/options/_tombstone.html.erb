@@ -15,8 +15,10 @@
 	  <dd><%= number_to_percentage(option.dividend, :precision => 5) %></dd>
 	  <dt><strong>Risk-free rate:</strong></dt>
 	  <dd><%= number_to_percentage(option.riskfree, :precision => 5) %></dd>
-	  <dt><strong>Fair value</strong></dt>
-	  <dd><%= number_to_currency(option.black_scholes, :precision => 5) %></dd>
+	  <dt><strong>Call price</strong></dt>
+	  <dd><%= number_to_currency(option.call_price, :precision => 5) %></dd>
+	  <dt><strong>Put price</strong></dt>
+	  <dd><%= number_to_currency(option.put_price, :precision => 5) %></dd>
 	</dl>
 	<div class="pull-right">
 		<%= link_to edit_option_path(option), :title => "Edit" do %>
