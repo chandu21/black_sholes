@@ -46,7 +46,8 @@ class OptionsController < ApplicationController
     @option = current_user.options.build(params[:option])
     option_params = params[:option]
     @prices = Option.black_scholes_call_price(option_params[:price].to_i,option_params[:strike].to_i,option_params[:riskfree].to_i,option_params[:dividend].to_f,option_params[:term].to_f,option_params[:volatility].to_f) 
-    @option.call_price,@option.put_price = @prices[0],@prices[1]
+    @option.call_price = @prices[0]
+    @option.put_price = @prices[1]
     respond_to do |format|
       if @option.save
         format.html { redirect_to @option, notice: 'Option was successfully created.' }
