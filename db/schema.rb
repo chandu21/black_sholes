@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120715210011) do
+ActiveRecord::Schema.define(:version => 20161226194016) do
 
   create_table "options", :force => true do |t|
     t.float    "price"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(:version => 20120715210011) do
     t.datetime "updated_at", :null => false
     t.integer  "user_id"
     t.string   "title"
+    t.float    "call_price"
+    t.float    "put_price"
   end
 
   add_index "options", ["user_id"], :name => "index_options_on_user_id"

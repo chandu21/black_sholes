@@ -16,8 +16,10 @@
   <dd><%= number_to_percentage(@option.dividend, :precision => 5) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:riskfree) %>:</strong></dt>
   <dd><%= number_to_percentage(@option.riskfree, :precision => 5) %></dd>
-  <dt><strong>Fair value</strong></dt>
-  <dd><%= number_to_currency(@option.black_scholes, :precision => 5) %></dd>
+  <dt><strong>call price</strong></dt>
+  <dd><%= number_to_currency(@option.call_price, :precision => 5) %></dd>
+  <dt><strong>put price</strong></dt>
+  <dd><%= number_to_currency(@option.put_price, :precision => 5) %></dd>
 </dl>
 
 <div class="form-actions">
